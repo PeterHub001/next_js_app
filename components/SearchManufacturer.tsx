@@ -16,10 +16,10 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
 
 
   return (
-    <div className='search-manufacturer'>
+    <div className='flex search-manufacturer w-full items-center'>
       <Combobox>
-        <div className='relative w-full'>
-          <Combobox.Button className='absolute top-[14px ]'>
+        <div className='relative'>
+          <Combobox.Button className='absolute '>
             <Image
             src={carLogo}
             alt='car-logo'
@@ -29,7 +29,7 @@ const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerP
             />
           </Combobox.Button>
           <Combobox.Input
-          className='search-manufacturer__input'
+          className='search-manufacturer__input w-full'
           placeholder='Volkswagen'
           displayValue={(manufacturer: string) => manufacturer}
           onChange={(e) => setQuery(e.target.value)}
